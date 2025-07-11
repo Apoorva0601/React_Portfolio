@@ -15,11 +15,15 @@ export default function Header() {
       </nav>
 
       <div className="resume-section">
-        <a href="/resume.pdf" download className="nav-btn resume-btn">
-          <FaDownload style={{ marginRight: '6px' }} />
-          Resume
-        </a>
-      </div>
+  <a
+    href="/Apoorva_Resume.pdf"
+    download="Apoorva_Resume.pdf"
+    className="nav-btn resume-btn"
+  >
+    <FaDownload style={{ marginRight: '6px' }} />
+    Resume
+  </a>
+</div>
     </header>
   );
 }

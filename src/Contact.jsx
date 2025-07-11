@@ -18,14 +18,14 @@ export default function Contact() {
     setSubmitted(false);
 
     emailjs.sendForm(
-      'YOUR_SERVICE_ID',    // 👉 Replace with your EmailJS Service ID
-      'YOUR_TEMPLATE_ID',   // 👉 Replace with your EmailJS Template ID
+      'service_zz21eca',     // ✅ Your EmailJS Service ID
+      'template_p2srynu',    // ✅ Your EmailJS Template ID
       e.target,
-      'YOUR_PUBLIC_KEY'     // 👉 Replace with your EmailJS Public Key
+      'My1cjnh8bLH2F3KLn'    // ✅ Your EmailJS Public Key
     ).then(() => {
       console.log('SUCCESS!');
       setSubmitted(true);
-      e.target.reset();  // Reset the form
+      e.target.reset();  
       setTimeout(() => setSubmitted(false), 3000);
     }).catch((error) => {
       console.error('FAILED...', error);
@@ -44,12 +44,12 @@ export default function Contact() {
         <form onSubmit={handleSubmit} className={`contact-form ${animate ? 'slide-down' : ''}`}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
-            <input type="text" name="from_name" id="name" placeholder="Your full name" required />
+            <input type="text" name="name" id="name" placeholder="Your full name" required />
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email</label>
-            <input type="email" name="from_email" id="email" placeholder="your.email@example.com" required />
+            <input type="email" name="email" id="email" placeholder="your.email@example.com" required />
           </div>
 
           <div className="form-group">

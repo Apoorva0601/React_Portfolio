@@ -3,6 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
  scroll-behavior: smooth;
+ scroll-padding-top: 100px;
   color-scheme: light dark;
   color: rgba(231, 226, 226, 0.813);
   background-color: #050505;
