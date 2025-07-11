@@ -1,0 +1,106 @@
+.projects-section {
+  padding: 30px 40px;
+  color: white;
+  background: #000;
+}
+project-title {
+  scroll-margin-top: 150px; /* adjust this to your header height */
+}
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: rgba(156, 104, 7, 0.993);
+  text-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+  font-family: 'Poppins', sans-serif;
+}
+
+.section-subtitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Set gap between cards to approx. 1/2 inch (~12.7mm ≈ 48px) */
+.project-grid {
+  display: flex; /* Use flexbox instead of grid for simple horizontal alignment */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 0; /* Remove all gaps */
+  justify-content: center; /* Optional: center the cards in the container */
+}
+
+
+.project-card {
+  padding: 20px;
+  max-width: 420px; /* Keep your desired max-width */
+  margin: 20px;        /* Remove auto margin */
+  border: 1px solid rgba(189, 125, 7, 0.8);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease;
+}
+
+
+.project-card:hover {
+   border: 1px solid rgba(120, 80, 5, 0.8);
+  background-color: rgba(125, 77, 6, 0.08);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 12px rgba(123, 71, 7, 0.4);
+  cursor: default;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-weight: 600;
+}
+
+.file-icon {
+  color: orange;
+  font-size: 2rem; /* Increased icon size */
+}
+
+.project-links a {
+  margin-left: 10px;
+  color: orange;
+  background: #111;
+  padding: 10px; /* Slightly bigger clickable area */
+  border: 1px solid rgba(189, 125, 7, 0.8);
+  font-size: 1.6rem; /* Increased icon size */
+  border-radius: 10px;
+  transition: 0.2s ease;
+}
+
+.project-links a:hover {
+  background-color: rgb(107, 70, 3);
+  color: black;
+}
+
+/* Center the image */
+.project-img {
+  display: block;
+  margin: 12px auto; /* Centers the image horizontally */
+  width: 60%;
+  border-radius: 12px;
+}
+
+.project-description {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
