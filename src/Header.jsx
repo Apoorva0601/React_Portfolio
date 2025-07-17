@@ -1,29 +1,68 @@
 import './Header.css';
-import { FaDownload } from 'react-icons/fa';
+import { FaDownload, FaBars, FaTimes } from 'react-icons/fa';
+import { useState } from 'react';
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="glass-header">
       <div className="brand-name">APOORVA</div>
-
-      <nav className="nav-buttons">
+      
+      {/* Desktop Navigation */}
+      <nav className="nav-buttons desktop-nav">
         <a href="#about-title" className="nav-btn">About</a>
-<a href="#projects-title" className="nav-btn">Projects</a>
-<a href="#course-title" className="nav-btn">Course</a>
-<a href="#contact-title" className="nav-btn">Contact</a>
-
+        <a href="#projects-title" className="nav-btn">Projects</a>
+        <a href="#course-title" className="nav-btn">Course</a>
+        <a href="#contact-title" className="nav-btn">Contact</a>
       </nav>
 
-      <div className="resume-section">
-  <a
-    href="/Apoorva_Resume.pdf"
-    download="Apoorva_Resume.pdf"
-    className="nav-btn resume-btn"
-  >
-    <FaDownload style={{ marginRight: '6px' }} />
-    Resume
-  </a>
-</div>
+      {/* Desktop Resume Button */}
+      <div className="resume-section desktop-resume">
+        <a
+          href="/Apoorva_Resume.pdf"
+          download="Apoorva_Resume.pdf"
+          className="nav-btn resume-btn"
+        >
+          <FaDownload style={{ marginRight: '6px' }} />
+          Resume
+        </a>
+      </div>
+
+      {/* Mobile Menu Toggle */}
+      <button className="mobile-menu-toggle" onClick={toggleMenu}>
+        {isMenuOpen ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Mobile Navigation Menu */}
+      <div className={`mobile-nav ${isMenuOpen ? 'open' : ''}`}>
+        <nav className="mobile-nav-buttons">
+          <a href="#about-title" className="nav-btn mobile-nav-btn" onClick={closeMenu}>About</a>
+          <a href="#projects-title" className="nav-btn mobile-nav-btn" onClick={closeMenu}>Projects</a>
+          <a href="#course-title" className="nav-btn mobile-nav-btn" onClick={closeMenu}>Course</a>
+          <a href="#contact-title" className="nav-btn mobile-nav-btn" onClick={closeMenu}>Contact</a>
+          <a
+            href="/Apoorva_Resume.pdf"
+            download="Apoorva_Resume.pdf"
+            className="nav-btn resume-btn mobile-resume-btn"
+            onClick={closeMenu}
+          >
+            <FaDownload style={{ marginRight: '6px' }} />
+            Resume
+          </a>
+        </nav>
+      </div>
+
+      {/* Mobile Overlay */}
+      {isMenuOpen && <div className="mobile-overlay" onClick={closeMenu}></div>}
     </header>
   );
 }
