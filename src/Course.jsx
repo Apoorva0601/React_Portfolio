@@ -42,7 +42,7 @@ const Course = () => {
 
     return (
         <>
-            <h3 className="course-title">
+            <h3 id="course-title" className="course-title">
                 Courses & Certifications
             </h3>
             <div className="embla">
