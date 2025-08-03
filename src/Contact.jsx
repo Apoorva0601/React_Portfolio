@@ -35,7 +35,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="contact-section">
-      <h2 id="contact-title" className="contact-title">Contact Me</h2>
+      <h2 id="contact-title" className="contact-title">CONTACT ME</h2>
 
       {submitted && <p className="success-message">Successfully Submitted!!</p>}
       {error && <p className="error-message">{error}</p>}
