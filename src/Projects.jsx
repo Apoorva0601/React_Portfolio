@@ -4,9 +4,24 @@ import IDcardImage from './assets/project1.png';
 import AnalysisImage from './assets/project2.png';
 import QuizImage from './assets/project3.png';
 import WeatherImage from './assets/project4.png';
-
+import FittnesImage from './assets/project5.png';
+import chatImage from './assets/project6.png';
 export default function Projects() {
   const projects = [
+    {
+      title: 'Real-Time Chat App',
+      description: 'A sleek MERN Chat App with a clean, responsive UI and real-time messaging powered by Socket.io. It allows users to create accounts, join chat rooms, and exchange messages instantly. Built using React and Node.js, it features JWT authentication and uses MongoDB for efficient data storage and retrieval.',
+      image: chatImage,
+      github: 'https://github.com/Anvithshetty17/chat-app',
+      link: 'https://chat-app-psi-pink.vercel.app/login'
+    },
+    {
+      title: 'Fitness Tracker',
+      description: ' A sleek MERN Fitness Tracker app with a clean, responsive UI and modern design. It allows users to log daily workouts like running, yoga, or gym, along with duration and date. Built using React and Node.js, it also integrates Axios and MongoDB for efficient data handling and real-time updates.',
+      image: FittnesImage,
+      github: 'https://github.com/Apoorva0601/fitness_tracker.git',
+      link: 'https://fitness-tracker-olive-rho.vercel.app/'
+    },
     {
       title: 'Digital Student ID Card',
       description: 'A sleek Flutter Student ID Card app with a responsive UI and modern gradient design. It features an animated profile image, institutional branding, and neatly displays key student details such as name, course, and USN. Additionally, it generates a barcode for the USN to simulate real-world ID scanning functionality.',
@@ -39,7 +54,7 @@ export default function Projects() {
 
   return (
     <>
-      <h2 id="projects-title" className="section-title">Projects</h2>
+      <h2 id="projects-title" className="section-title">PROJECTS</h2>
       <section className="projects-section" id="projects">
         <div className="project-grid">
           {projects.map((proj, idx) => (
