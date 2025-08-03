@@ -7,7 +7,7 @@
 .skills-title {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   color: rgba(156, 104, 7, 0.993);
   text-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
   font-family: 'Poppins', sans-serif;
@@ -25,7 +25,7 @@
 
 /* Skills badge container inside each category */
 .skill-category p {
-  margin: 0;
+  margin: 30;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
@@ -33,6 +33,7 @@
 
 /* Individual skill badge */
 .skill-category p span {
+  margin:4px;
   padding: 8px 16px;
   border: 1px solid rgba(189, 125, 7, 0.8);
   border-radius: 999px;
@@ -84,7 +85,7 @@
 
   .skills-title {
     font-size: 2rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: -1rem;
   }
 
   .skills-container {
@@ -116,7 +117,6 @@
 
   .skills-title {
     font-size: 1.8rem;
-    margin-bottom: 1rem;
   }
 
   .skills-container {

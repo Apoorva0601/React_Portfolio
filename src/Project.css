@@ -11,7 +11,7 @@
 .section-title {
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: -0.1rem;
   color: rgba(156, 104, 7, 0.993);
   text-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
   font-family: 'Poppins', sans-serif;

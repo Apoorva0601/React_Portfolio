@@ -47,7 +47,7 @@
   display: flex;
 }
 
-/* Mobile Menu Toggle Button */
+/* Mobile Menu Toggle Button - Hidden by default on desktop */
 .mobile-menu-toggle {
   display: none;
   background: none;
@@ -65,8 +65,9 @@
   background: rgba(255, 165, 0, 0.1);
 }
 
-/* Mobile Navigation */
+/* Mobile Navigation - Hidden by default on desktop */
 .mobile-nav {
+  display: none; /* Completely hidden on desktop */
   position: fixed;
   top: 0;
   right: -100%;
@@ -103,8 +104,9 @@
   border-color: orange;
 }
 
-/* Mobile Overlay */
+/* Mobile Overlay - Hidden by default on desktop */
 .mobile-overlay {
+  display: none; /* Completely hidden on desktop */
   position: fixed;
   top: 0;
   left: 0;
@@ -139,6 +141,15 @@
 
   /* Show mobile menu toggle */
   .mobile-menu-toggle {
+    display: block;
+  }
+
+  /* Show mobile navigation elements on mobile */
+  .mobile-nav {
+    display: block;
+  }
+
+  .mobile-overlay {
     display: block;
   }
 }
